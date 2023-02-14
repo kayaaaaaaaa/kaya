@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Kaya</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/top-app-bar@7.0.0/dist/mdc.top-app-bar.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/button@6.0.0/dist/mdc.button.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/typography@3.0.0/dist/mdc.typography.min.css">
-  </head>
-  <body>
-     <button id="generate-button" class="mdc-button mdc-button--raised">Go Kaya</button>
-  <div id="poem-container" class="mdc-typography"></div>
-    <script src>const poems = [
+<head>
+	<meta charset="UTF-8">
+	<title>Kaya</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<style>
+		body {
+			background-color: #f0f0f0;
+			font-family: 'Roboto', sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			margin-top: 20px;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container center-align">
+		<h1 style="font-size: 18px;">Kaya</h1>
+		<button class="btn waves-effect waves-light" id="generate-btn">Go Kaya!</button>
+		<div id="poem-container"></div>
+	</div>
+
+	<script>const poems = [
   "Roses are red, violets are blue, being with you makes me feel like anything is possible, Yashika.",
   "I never knew that I could love someone as much as I love you, Yashika. You have truly changed my life for the better.",
   "When I'm with you, Kaustav, everything else fades away. You are the only one that matters to me.",
@@ -20,7 +37,7 @@
 ];
 
 const poemContainer = document.getElementById("poem-container");
-const generateButton = new mdc.ripple.MDCRipple(document.querySelector('#generate-button'));
+const generateButton = document.getElementById("generate-button");
 
 generateButton.addEventListener("click", function() {
   const randomIndex = Math.floor(Math.random() * poems.length);
@@ -28,7 +45,5 @@ generateButton.addEventListener("click", function() {
   poemContainer.innerHTML = `<p>${randomPoem}</p>`;
 });
 </script>
- 
-  <script src="https://cdn.jsdelivr.net/npm/@material/ripple@6.0.0/dist/mdc.ripple.min.js"></script>
-  </body>
+</body>
 </html>
