@@ -1,23 +1,5 @@
-/* Default styles */
-#generate-button {
-  font-size: 16px;
-  padding: 12px 24px;
+.center {
+  border: 5px solid;
+  padding: 50px 0;
 }
 
-#poem-container {
-  font-size: 20px;
-  line-height: 1.5;
-}
-
-/* Styles for small screens */
-@media screen and (max-width: 480px) {
-  #generate-button {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
-
-  #poem-container {
-    font-size: 16px;
-    line-height: 1.2;
-  }
-}
