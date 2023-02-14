@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Kaya</title>
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
-    <button id="generate-button">Go Kaya Go!</button>
-    <div id="poem-container"></div>
-    <script>const poems = [
-      "Roses are red, violets are blue, being with you makes me feel like anything is possible, Yashika.",
-      "I never knew that I could love someone as much as I love you, Yashika. You have truly changed my life for the better.",
-      "When I'm with you, Kaustav, everything else fades away. You are the only one that matters to me.",
-      "I am so grateful to have you in my life, Yashika. I don't know what I would do without you.",
-      "You are the sun in my sky, Yashika. You brighten up my life and make everything better.",
-      "I love you more every day, Kaustav. You are the missing piece that completes me."
-      "You were a bird and i was a cloud. But then you disappeared into the night."
-       "
-    ];
+<head>
+	<meta charset="UTF-8">
+	<title>Kaya</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<style>
+		body {
+			background-color: #f0f0f0;
+			font-family: 'Roboto', sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			margin-top: 20px;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container center-align">
+		<h1>Love Poem Generator</h1>
+		<button class="btn waves-effect waves-light" id="generate-btn">Generate Poem</button>
+		<div id="poem-container"></div>
+	</div>
 
-    const poemContainer = document.getElementById("poem-container");
-    const generateButton = document.getElementById("generate-button");
-
-    generateButton.addEventListener("click", function() {
-      const randomIndex = Math.floor(Math.random() * poems.length);
-      const randomPoem = poems[randomIndex];
-      poemContainer.innerHTML = `<p>${randomPoem}</p>`;
-    });
-</script>
-  </body>
+	<script src="script.js"></script>
+</body>
 </html>
