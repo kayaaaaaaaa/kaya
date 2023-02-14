@@ -1,0 +1,26 @@
+#generate-button {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#poem-container {
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 16px;
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  #generate-button {
+    width: 100%;
+  }
+
+  #poem-container {
+    margin: 20px 10px;
+    max-width: none;
+  }
+}
